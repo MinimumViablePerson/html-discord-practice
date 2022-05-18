@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh; /* viewport height */
+  width: 100vw; /* viewport width */
+  display: grid;
+  grid-template:
+    'servers top-bar top-bar' auto
+    'servers channels chat' 1fr /
+    auto auto 1fr;
+}
+
+.servers {
+  grid-area: servers;
+  background-color: #e2e5e8;
+  padding: 0.4rem;
+}
+
+.server-list {
+  list-style: none;
+  display: grid;
+  grid-gap: 0.2rem;
+}
+
+.server-item img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.top-bar {
+  grid-area: top-bar;
+  padding: 0.3rem;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.menu-items {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-gap: 0.2rem;
+}
+
+.menu-item {
+  background: none;
+  border: none;
+  padding: 2px;
+  opacity: 0.8;
+}
+
+.menu-item img {
+  width: 15px;
+  height: 15px;
+}
+
+.search-bar {
+  background-color: #e2e5e8;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.2rem;
+  width: 100px;
+  transition: 250ms;
+}
+
+.search-bar:focus {
+  width: 150px;
+}
+
+.channels {
+  grid-area: channels;
+  background-color: #0000ff40;
+}
+
+.chat {
+  grid-area: chat;
+  background-color: #ffff0040;
+}
